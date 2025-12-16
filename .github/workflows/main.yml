@@ -16,10 +16,15 @@ env:
 jobs:
   terraform:
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
         env-folder: [dev]
       fail-fast: false
+
+    permissions:
+      id-token: write
+      contents: read
 
     environment: ${{ matrix.env-folder }}
 
