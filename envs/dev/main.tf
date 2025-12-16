@@ -32,7 +32,7 @@ locals {
 }
 
 module "app_cloudfront" {
-  source = "git::https://github.com/bilalyasin889/cloudfront_s3.git?ref=v1.0.0"
+  source = "git::https://github.com/bilalyasin889/cloudfront_s3.git?ref=v1.0.1"
 
   name        = local.frontend.cloudfront_name
   bucket_name = local.frontend.origin_bucket_name
